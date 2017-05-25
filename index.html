@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title> Jessica Connor</title>
+            <style>
+            body {
+                background: rgb(102, 76, 153);
+                color: rgb(45, 45, 45);
+                padding: 10px;
+                font-family: arial;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            [id=all-contents] {
+                max-width: 800px;
+                margin: auto;
+            }
+    
+            /* navigation menu */
+            nav {
+                background: rgb(102, 205, 153);
+                margin: 0 auto;
+                margin-bottome: 20px;
+                display: flex;
+                padding: 10px;
+            }
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(204, 91, 123);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+    
+            /* main container area beneath menu */
+            main {
+                background: rgb(245, 238, 219);
+                display: flex;
+            }
+            [class=sidebar] {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            [class=sidebar] img {
+                width: 200px;
+            }
+            [class=content] {
+                flex: 1;
+                padding: 15px;
+            }
+            [class=interests] header {
+                font-size: 1.25em;
+            }
+        </style>
+        </head>
+        
+        <body>
+            <div id="all-contents">
+                <nav>
+                    <header>Jessica Connor</header>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </nav>
+                
+                <main>
+                    <div class="sidebar">
+                        <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/1380138_10201425107286379_1251433943_n.jpg?oh=4f0851a9e9d08165fee81a8e734e5842&oe=59BA6D0B"
+                    </div>
+                    
+                    <div class="content">
+                        <header> Jessica Connor</header>
+                        <p>Educator</p>
+                        <section class="interests">
+                            <header>Interests</header>
+                            <ul>
+                                <li>Geographic Anthropology</li>
+                                <li>Black Renaissance Literature</li>
+                                <li>Food Justice</li>
+                            </ul>
+                        </section>
+                    </div>
+                    
+                </main>
+            </div>
+        </body>
+</html>
