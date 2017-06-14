@@ -106,8 +106,8 @@ function rando(arr){
     return arr[Math.floor(Math.random() * (max-min)) + min];
 }
 
-console.log(rando(animals));
-friends.push((rando(animals).name));
+console.log(getRandom(animals));
+friends.push((getRandom(animals).name));
 console.log(friends);
 
 hedgehog.friends = friends;
