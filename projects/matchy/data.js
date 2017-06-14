@@ -111,6 +111,9 @@ friends.push((rando(animals).name));
 console.log(friends);
 
 hedgehog.friends = friends;
+rhino.friends = friends;
+duck.friends = friends;
+lion.friends = friends;
 /** 
  * Nice work! You're done Part 1. Pat yourself on the back and 
  * move onto Part 2 in the file called "functions.js"
