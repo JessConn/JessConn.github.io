@@ -17,6 +17,7 @@ function search(animals, name) {
         if(name === animals[i].name) {
             return (animals[i]);
         }
+        return null;
     }
 }
 
@@ -48,9 +49,9 @@ function remove(animals, name) {
 // Step 4 - Create ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function add(animals, animal) {
-    if(Object.hasOwnProperty(animal.name.length > 0) && Object.hasOwnProperty(animal.species.length > 0)) {
+    if(animal.name !== animals[i].name) {
         for(var i = 0; i < animals.length; i++) {
-            if(animal.name !== animals[i].name) {
+            if(Object.hasOwnProperty(animal.name.length > 0) && Object.hasOwnProperty(animal.species.length > 0)) {
                 animals.push(animal);
             }
         }
