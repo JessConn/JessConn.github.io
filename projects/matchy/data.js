@@ -100,7 +100,7 @@ animals.push(hedgehog);
 //this is a list, so we'll use an array
 
 var friends = [];
-function rando(arr){
+function getRandom(arr){
     var min = Math.ceil(0);
     var max = Math.floor(arr.length);
     return arr[Math.floor(Math.random() * (max-min)) + min];
@@ -111,7 +111,7 @@ friends.push((getRandom(animals).name));
 console.log(friends);
 
 hedgehog.friends = friends;
-rhino.friends = friends;
+animal.friends = friends;
 duck.friends = friends;
 lion.friends = friends;
 
