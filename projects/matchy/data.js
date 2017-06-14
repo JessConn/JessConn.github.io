@@ -15,7 +15,7 @@ var animal = {};
 animal.species = "Rhino";
 animal['name'] = "Sparky";
 animal.noises = [];
-// console.log(animal);
+console.log(animal);
 
 
 
@@ -29,16 +29,16 @@ noises[0] = "chewing";
 noises.push("grunt");
 noises.unshift("pfffft");
 noises[noises.length] = "roar";
-// console.log(noises.length);
-// console.log(noises[noises.length - 1]);
-// console.log(noises);
+console.log(noises.length);
+console.log(noises[noises.length - 1]);
+console.log(noises);
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 animal.noises = noises;
-// console.log(animal);
+console.log(animal);
 
 
 /* *******************************************************************
@@ -74,7 +74,7 @@ var duck = {
 };
 
 animals.push(duck);
-// console.log(animals);
+console.log(animals);
 
 var lion = {
     species: 'lion',
@@ -92,28 +92,28 @@ var hedgehog = {
 animals.push(hedgehog);
 
 
-// console.log(animals);
-// console.log(animals.length);
+console.log(animals);
+console.log(animals.length);
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 //this is a list, so we'll use an array
 
 var friends = [];
-function getRandom(arr){
+var rando = function getRandom(arr){
     var min = Math.ceil(0);
     var max = Math.floor(arr.length);
     return arr[Math.floor(Math.random() * (max-min)) + min];
 }
 
-console.log(getRandom(animals));
-friends.push((getRandom(animals).name));
-console.log(friends);
+// console.log(getRandom(animals));
+friends.push(rando);
+// console.log(friends);
 
-hedgehog.friends = friends;
-animal.friends = friends;
-duck.friends = friends;
-lion.friends = friends;
+hedgehog.friends = rando;
+animal.friends = rando;
+duck.friends = rando;
+lion.friends = rando;
 
 /** 
  * Nice work! You're done Part 1. Pat yourself on the back and 
