@@ -17,7 +17,6 @@ function search(animals, name) {
         if(name === animals[i].name) {
             return (animals[i]);
         }
-        return null;
     }
 }
 
@@ -26,8 +25,8 @@ function search(animals, name) {
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function replace(animals, name, replacement) {
-    if(animals[i].name === name) {
-        for(var i = 0; i < animals.length; i++) {
+    for(var i = 0; i < animals.length; i++) {
+        if(name === animals[i].name) {
              animals.splice(i, 1, replacement);
         }
     }
@@ -39,7 +38,7 @@ function replace(animals, name, replacement) {
 //////////////////////////////////////////////////////////////////////
 function remove(animals, name) {
         for(var i = 0; i < animals.length; i++) {
-            if(animals[i] === name) {
+            if(name == animals[i]) {
             animals.splice(i, 1);
         }
     }
@@ -49,13 +48,14 @@ function remove(animals, name) {
 // Step 4 - Create ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function add(animals, animal) {
-    if(animal.name !== animals[i].name) {
+    if(animal.name.length> 0 && animal.species.length > 0){
         for(var i = 0; i < animals.length; i++) {
-            if(Object.hasOwnProperty(animal.name.length > 0) && Object.hasOwnProperty(animal.species.length > 0)) {
-                animals.push(animal);
-                return animals;
+            if(animal.name === animals[i].name) {
+                return;
             }
         }
+        
+         animals.push(animal);
     }
 }
 
