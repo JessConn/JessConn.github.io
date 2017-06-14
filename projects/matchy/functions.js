@@ -27,11 +27,11 @@ function search(animals, name) {
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function replace(animals, name, replacement) {
-     for(var i = 0; i < animals.length; i++) {
-         if(animals[i].name === name) {
+    if(animals[i].name === name) {
+        for(var i = 0; i < animals.length; i++) {
              animals.splice(animals[i], 1, replacement);
-         }
-     }
+        }
+    }
 }
 
 
@@ -39,21 +39,21 @@ function replace(animals, name, replacement) {
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function remove(animals, name) {
-     for(var i = 0; i < animals.length; i++) {
-        if(animals[i] === name) {
+    if(animals[i] === name) {
+        for(var i = 0; i < animals.length; i++) {
             animals.splice(animals[i], 1);
         }
-}
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Create ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function add(animals, animal) {
-    for(var i = 0; i < animals.length; i++) {
-        if(animal.name !== animals[i].name) {
-            if(Object.hasOwnProperty(animal.name.length > 0) && Object.hasOwnProperty(animal.species.length > 0)) {
-            animals.push(animal);
+    if(Object.hasOwnProperty(animal.name.length > 0) && Object.hasOwnProperty(animal.species.length > 0)) {
+        for(var i = 0; i < animals.length; i++) {
+            if(animal.name !== animals[i].name) {
+                animals.push(animal);
             }
         }
     }
@@ -74,4 +74,4 @@ if((typeof process !== 'undefined') &&
     module.exports.replace = replace;
     module.exports.remove = remove;
     module.exports.add = add;
-};
+}
