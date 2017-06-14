@@ -28,7 +28,7 @@ function search(animals, name) {
 function replace(animals, name, replacement) {
     if(animals[i].name === name) {
         for(var i = 0; i < animals.length; i++) {
-             animals.splice(animals[i], 1, replacement);
+             animals.splice(i, 1, replacement);
         }
     }
 }
@@ -38,9 +38,9 @@ function replace(animals, name, replacement) {
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function remove(animals, name) {
-    if(animals[i] === name) {
         for(var i = 0; i < animals.length; i++) {
-            animals.splice(animals[i], 1);
+            if(animals[i] === name) {
+            animals.splice(i, 1);
         }
     }
 }
@@ -53,6 +53,7 @@ function add(animals, animal) {
         for(var i = 0; i < animals.length; i++) {
             if(Object.hasOwnProperty(animal.name.length > 0) && Object.hasOwnProperty(animal.species.length > 0)) {
                 animals.push(animal);
+                return animals;
             }
         }
     }
