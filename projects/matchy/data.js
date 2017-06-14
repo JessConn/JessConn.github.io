@@ -100,20 +100,17 @@ console.log(animals.length);
 //this is a list, so we'll use an array
 
 var friends = [];
-var rando = function getRandom(arr){
+function getRandom(arr){
     var min = Math.ceil(0);
     var max = Math.floor(arr.length);
     return arr[Math.floor(Math.random() * (max-min)) + min];
 }
 
-// console.log(getRandom(animals));
-friends.push(rando);
-// console.log(friends);
+console.log(getRandom(animals));
+friends.push((getRandom(animals).name));
+console.log(friends);
 
-hedgehog.friends = rando;
-animal.friends = rando;
-duck.friends = rando;
-lion.friends = rando;
+hedgehog.friends = friends;
 
 /** 
  * Nice work! You're done Part 1. Pat yourself on the back and 

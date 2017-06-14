@@ -51,10 +51,12 @@ function remove(animals, name) {
 //////////////////////////////////////////////////////////////////////
 function add(animals, animal) {
     for(var i = 0; i < animals.length; i++) {
-        if(Object.hasOwnProperty(animal.name.length > 0) && Object.hasOwnProperty(animal.species.length > 0) && animal.name !== animals[i].name) {
+        if(animal.name !== animals[i].name) {
+            if(Object.hasOwnProperty(animal.name.length > 0) && Object.hasOwnProperty(animal.species.length > 0)) {
             animals.push(animal);
+            }
         }
-};
+    }
 }
 
 /** 
