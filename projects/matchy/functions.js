@@ -15,9 +15,7 @@
 function search(animals, name) {
     for(var i = 0; i < animals.length; i++) {
         if(name === animals[i].name) {
-            return animals[i];
-        } else {
-            return null;
+            return (animals[i]);
         }
     }
 }
