@@ -14,7 +14,7 @@
 //////////////////////////////////////////////////////////////////////
 function search(animals, name) {
     for(var i = 0; i < animals.length; i++) {
-        if(name === animals[i].name) {
+        if(name === animals[i]['name']) {
             return (animals[i]);
         }
     }
@@ -26,7 +26,7 @@ function search(animals, name) {
 //////////////////////////////////////////////////////////////////////
 function replace(animals, name, replacement) {
     for(var i = 0; i < animals.length; i++) {
-        if(name === animals[i].name) {
+        if(name === animals[i]['name']) {
              animals.splice(i, 1, replacement);
         }
     }
@@ -38,8 +38,8 @@ function replace(animals, name, replacement) {
 //////////////////////////////////////////////////////////////////////
 function remove(animals, name) {
         for(var i = 0; i < animals.length; i++) {
-            if(name == animals[i]) {
-            animals.splice(i, 1);
+            if(name === animals[i]['name']) {
+                animals.splice(i, 1);
         }
     }
 }
@@ -50,7 +50,7 @@ function remove(animals, name) {
 function add(animals, animal) {
     if(animal.name.length> 0 && animal.species.length > 0){
         for(var i = 0; i < animals.length; i++) {
-            if(animal.name === animals[i].name) {
+            if(animal.name === animals[i][name]) {
                 return;
             }
         }
