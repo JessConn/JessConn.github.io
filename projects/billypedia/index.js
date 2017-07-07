@@ -10,7 +10,7 @@ $(document).ready(function() {
         _.forEach(topRated, function(recording) {
             $('#list-top-rated').append($('<li>').text(recording.title));
         });
-        
+
     $('<section>').attr('id', 'section-recordings').append($('<h3>').text('Recordings')).appendTo($('#sidebar'));
     $('#section-recordings').append($('<ul>').attr('id', 'list-recordings').css('color', 'white').css('background-color', 'grey').css('border-radius', '4px').css('padding-left', '10px').css('padding-right', '10px').css('padding-bottom', '4px').css('padding-top', '4px'));
     
@@ -56,10 +56,8 @@ $(document).ready(function() {
       var recordingPics = _.pluck(data.discography.recordings, 'art');
     $('#recording-image').click(function(event) {
         var recordingPic = $('#recording-image').attr('src');
-        // console.log(topRatedPic);
         var max = recordingPics.length - 1;
         recordingPic = recordingPics[Math.floor(Math.random() * max)];
-        // console.log(billyPic);
         $('#recording-image').attr('src', recordingPic);
     });
     
